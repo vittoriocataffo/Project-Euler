@@ -242,14 +242,6 @@ def LongestCollatzSequence(n):
         chain.clear()
     return iTarget
 #print(LongestCollatzSequence(1000000))
-'''
+
 def LatticePaths():
-    currentIndex = [0,0]
-    while(currentIndex != [2,2]):
-        currentIndex = [0,0]
-
-
-[0,0] [0,1] [0,2]
-[1,0] [1,1] [1,2]
-[2,0] [2,1] [2,2]
-'''
+    pass

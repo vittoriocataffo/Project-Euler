@@ -246,5 +246,16 @@ def LongestCollatzSequence(n):
 #print(LongestCollatzSequence(1000000))
 
 ### Problem 15
-def LatticePaths():
-    pass
+def LatticePaths(n,m):
+    n += 1
+    m += 1
+    lattice = [[0]*m for i in range(n)]
+    for i in range(1,n):
+        lattice[i][0] = 1
+    for j in range(1,m):
+        lattice[0][j] = 1
+    for i in range(1,n):
+        for j in range(1,m):
+            lattice[i][j] = lattice[i-1][j] + lattice[i][j-1]
+    return lattice[-1][-1]
+#print(LatticePaths(20,20))
